@@ -20,5 +20,11 @@
   "bugs": {
     "url": "https://github.com/Harin23/battleships-using-nodejs/issues"
   },
-  "homepage": "https://github.com/Harin23/battleships-using-nodejs#readme"
+  "homepage": "https://github.com/Harin23/battleships-using-nodejs#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
 }
