@@ -1,0 +1,16 @@
+.battleship{
+    display: flex;
+    justify-content: space-between;
+}
+.you{
+    background-color: black;
+    width: 50vw;
+    height: 100vh;
+}
+.opp{
+    background-color: lime;
+    width: 50vw;
+    display: flex;
+    justify-content: flex-end;
+    height: 100vh;
+}
