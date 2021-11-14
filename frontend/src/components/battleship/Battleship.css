@@ -1,5 +1,6 @@
 .battleship{
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
 }
 .grid{
@@ -8,6 +9,7 @@
     display:flex;
     flex-wrap: wrap;
     background-color:lightgray;
+    color: black;
 }
 .square{
     height: 4vh;
@@ -24,7 +26,7 @@
     color: white;
 }
 .opp{
-    background-color: lime;
+    background-color: dimgray;
     width: 50vw;
     display: flex;
     flex-direction: column;
@@ -37,12 +39,37 @@
 .info{
     background-color: lightsteelblue;
 }
-
 .ships{
     margin-top: 2vh;
-    height: 24vh;
-    width: 24vw;
-    background-color: white;
+    padding-left: 1vw;
+    padding-right: 2vw;
+    height: 21vh;
+    width: 45vw;
+    background-color: lightsteelblue;
+    color: black;
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+.ship1-options{
+    align-self: flex-end;
+}
+.ship2-options{
+    align-self: flex-end;
+}
+.warnings{
+    color: red;
+}
+.place-button{
+    align-self: flex-end;
+}
+.rotate{
+    transform: rotate(90deg);
+}
+.start-button{
+justify-self: flex-end;
+}
+.player-status{
+    font-weight: 400;
+    color: lightskyblue;
 }
