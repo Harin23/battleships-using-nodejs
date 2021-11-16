@@ -1,7 +1,7 @@
 # battleships-using-nodejs
  Coding Challenge provided by Black Owl
 
-# (Demo link:)[https://www.loom.com/share/96745a26fe8e4b8ea38960723894df2b]
+(Demo link:)[https://www.loom.com/share/96745a26fe8e4b8ea38960723894df2b]
 
 
 ## Purpose
