@@ -25,7 +25,6 @@ io.on("connection", (socket) => {
       id: socket.id,
       ready: false,
       ship: [],
-      selected: [],
       shipLives: null,
     });
   } else {
@@ -58,18 +57,17 @@ io.on("connection", (socket) => {
       data = {};
       data.coordinates = coordinates;
       data.id = turn;
-      index = getIndex(users, socket.id);
-      users[index].selected.push(coordinates);
-      hitOrMiss = users[index].ship.indexOf(coordinates);
+      oppIndex = getIndex(users, turn) === 0 ? 1 : 0;
+      hitOrMiss = users[oppIndex].ship.indexOf(coordinates);
       if (hitOrMiss > -1) {
-        users[index].shipLives -= 1;
+        users[oppIndex].shipLives -= 1;
         data.color = "red";
       } else {
         data.color = "white";
       }
       io.sockets.emit("selectionMade", data);
-      if (users[index].shipLives > 0) {
-        turn = users[index === 0 ? 1 : 0].id;
+      if (users[oppIndex].shipLives > 0) {
+        turn = users[oppIndex].id;
         io.sockets.emit("turn", turn);
       } else {
         io.sockets.emit("gameover", turn);

@@ -42,7 +42,6 @@ export function gameover(socket, setWinner, setturn) {
   socket.on("gameover", (winner) => {
     setturn(null);
     socket.id === winner ? setWinner(true) : setWinner(false);
-    socket.emit("disconnect");
   });
 }
 
