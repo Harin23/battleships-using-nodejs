@@ -121,14 +121,14 @@ function Battleship(props) {
       coordinates = coordinates.match(/^([a-j]{1})([0-9]{1}|10)$/i);
       if (orientation === 0) {
         let row = map.indexOf(coordinates[1]);
-        return row + length <= map.length ? true : false;
+        return row + length <= map.length;
       } else if (orientation === 90) {
-        return parseInt(coordinates[2]) - length >= 0 ? true : false;
+        return parseInt(coordinates[2]) - length >= 0;
       } else if (orientation === 180) {
         let row = map.indexOf(coordinates[1]);
-        return row + 1 - length >= 0 ? true : false;
+        return row + 1 - length >= 0;
       } else if (orientation === 270) {
-        return parseInt(coordinates[2]) - 1 + length <= 10 ? true : false;
+        return parseInt(coordinates[2]) - 1 + length <= 10;
       }
     }
   };
